@@ -7,3 +7,5 @@ C:\Users\bugbo\Desktop\Epicodus\Independent_Project_7\Bakery\obj\Debug\netcoreap
 C:\Users\bugbo\Desktop\Epicodus\Independent_Project_7\Bakery\obj\Debug\netcoreapp2.2\Bakery.AssemblyInfo.cs
 C:\Users\bugbo\Desktop\Epicodus\Independent_Project_7\Bakery\obj\Debug\netcoreapp2.2\Bakery.dll
 C:\Users\bugbo\Desktop\Epicodus\Independent_Project_7\Bakery\obj\Debug\netcoreapp2.2\Bakery.pdb
+C:\Users\bugbo\Desktop\Epicodus\Independent_Project_7\Bakery\bin\Debug\netcoreapp2.2\Bakery.runtimeconfig.json
+C:\Users\bugbo\Desktop\Epicodus\Independent_Project_7\Bakery\bin\Debug\netcoreapp2.2\Bakery.runtimeconfig.dev.json
