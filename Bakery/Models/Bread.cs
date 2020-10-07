@@ -1,9 +1,9 @@
-namespace Bakery
+namespace Bakery.Models
 {
   public class Bread
   {
-    public int Count;
-    public int Price;
+    public int Count { get; set; }
+    public int Price { get; set; }
 
     public Bread(int amount)
     {
