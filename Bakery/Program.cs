@@ -18,7 +18,10 @@ namespace Bakery
       Console.WriteLine("And Pastries are $2 for 1 or $5 for 3.");
       Console.WriteLine("");
       Console.WriteLine("Please pick between: (1) Bread, (2) Pastries, or (3) Both");
-      orderOption = int.Parse(Console.ReadLine());
+
+      string orderString = Console.ReadLine();
+
+      Int32.TryParse(orderString, out orderOption);
 
       if(orderOption == 1)
       {
@@ -28,10 +31,15 @@ namespace Bakery
       {
         orderPastries = GetPastries();
       }
-      else
+      else if (orderOption == 3)
       {
         orderBread = GetBread();
         orderPastries = GetPastries();
+      }
+      else
+      {
+        Main();
+        return;
       }
       Bread breadOrder = new Bread(orderBread);
       breadOrder.CalculatePrice();
@@ -39,14 +47,16 @@ namespace Bakery
       pastriesOrder.CalculatePrice();
       orderPrice = breadOrder.Price + pastriesOrder.Price;
 
-      Console.WriteLine("Your order of " + orderBread + " bread and " + orderPastries + " pastries comes out to $" + orderPrice);
+      Console.WriteLine($"Your order of {orderBread} bread and {orderPastries} pastries comes out to ${orderPrice}");
     }
 
     static int GetBread()
     {
       Console.WriteLine("How many loafs of bread are you ordering today?");
-      int value = int.Parse(Console.ReadLine());
-      if (!(value >= 0))
+      int value = 0;
+      string input = Console.ReadLine();
+      Int32.TryParse(input, out value);
+      if (!(value > 0))
       {
         Console.WriteLine("An Error Occurred Trying again.");
         value = GetBread();
@@ -57,8 +67,10 @@ namespace Bakery
     static int GetPastries()
     {
       Console.WriteLine("How many pastries are you ordering today?");
-      int value = int.Parse(Console.ReadLine());
-      if (!(value >= 0))
+      int value = 0;
+      string input = Console.ReadLine();
+      Int32.TryParse(input, out value);
+      if (!(value > 0))
       {
         Console.WriteLine("An Error Occurred Trying again.");
         value = GetPastries();
